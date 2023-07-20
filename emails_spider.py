@@ -20,3 +20,4 @@ class EMailsSpider(CrawlSpider):
         for email in emails:
             if 'bootstrap' not in email:
                 yield {response.url: email}
+# scrapy runspider emails_spider.py -o scraped_emails.json -L WARN
